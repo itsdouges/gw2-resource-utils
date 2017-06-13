@@ -16,7 +16,7 @@ npm install @gw2armory/resource-utils
 
 ## Api
 
-### build `(resourceName: string) => Promise<ResourceMap>`
+### `build (resourceName: string) => Promise<ResourceMap>`
 
 ```javascript
 import { build } from '@gw2armory/resource-utils';
@@ -25,15 +25,15 @@ const nameToIdMap = await build('items');
 // { "MONSTER ONLY Moa Unarmed Pet":1 ... }
 ```
 
-#### ResourceMap
+#### `ResourceMap`
 
 ```json
 {
- [itemName: string]: number
+ "Item Name": 10
 }
 ```
 
-### exact `(map: ResourceMap, itemName: string) => ?number`
+### `exact (map: ResourceMap, itemName: string) => ?number`
 
 ```javascript
 import { exact } from '@gw2armory/resource-utils';
@@ -42,7 +42,7 @@ const exact = exact(nameToIdMap, 'MONSTER ONLY Moa Unarmed Pet');
 // 1
 ```
 
-### fuzzy `(map: ResourceMap, itemName: string) => ?number`
+### `fuzzy (map: ResourceMap, itemName: string) => ?number`
 
 ```javascript
 import { fuzzy } from '@gw2armory/resource-utils';
