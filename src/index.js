@@ -1,5 +1,4 @@
 // @flow
 
-import mod from './module';
-export default mod;
-export { default as Component } from './Component';
+export { fuzzy, exact } from './find';
+export { build } from './build';

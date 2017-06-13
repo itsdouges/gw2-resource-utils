@@ -30,36 +30,9 @@ module.exports = {
     'import/no-duplicates': 'error',
     'import/extensions': 'off',
 
-    'react/require-default-props': 'off',
-    'react/forbid-prop-types': 'warn',
-
-    // Until this is fixed (child props in objects stop erroring)
-    // this is turned off.
-    'react/no-unused-prop-types': 'off',
-
-    'react/jsx-filename-extension': 'off',
-    'react/jsx-sort-props': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'react/sort-comp': ['error', {
-      order: [
-        'type-annotations',
-        'static-methods',
-        'lifecycle',
-        '/^on.+$/',
-        '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
-        'everything-else',
-        '/^render.+$/',
-        'render',
-      ],
-    }],
-
     'mocha/no-exclusive-tests': 'error',
   },
   globals: {
-    ReduxThunk: true,
-    GW2A_EMBED_OPTIONS: true,
-    __DEVELOPMENT__: true,
-    __webpack_public_path__: true,
     before: true,
     after: true,
     beforeEach: true,
