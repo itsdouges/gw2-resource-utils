@@ -38,7 +38,7 @@ const nameToIdMap = await build('items');
 ```javascript
 import { exact } from '@gw2armory/resource-utils';
 
-const exact = exact(nameToIdMap, 'MONSTER ONLY Moa Unarmed Pet');
+const itemId = exact(nameToIdMap, 'MONSTER ONLY Moa Unarmed Pet');
 // 1
 ```
 
@@ -47,7 +47,7 @@ const exact = exact(nameToIdMap, 'MONSTER ONLY Moa Unarmed Pet');
 ```javascript
 import { fuzzy } from '@gw2armory/resource-utils';
 
-const exact = fuzzy(nameToIdMap, 'monster');
+const items = fuzzy(nameToIdMap, 'monster');
 // { "Legendary Kudu's Monster Loot Box": 65497, ... }
 ```
 
