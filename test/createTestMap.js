@@ -1,3 +1,3 @@
 import { build } from '../src';
 
-build('items');
+build('items').then((map) => console.log(map));

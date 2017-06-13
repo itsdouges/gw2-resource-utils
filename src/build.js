@@ -38,6 +38,5 @@ export async function build (resourceType: string) {
       [resource.name]: resource.id,
     }), {});
 
-  // eslint-disable-next-line no-console
-  console.log(JSON.stringify(resourceMap));
+  return resourceMap;
 }

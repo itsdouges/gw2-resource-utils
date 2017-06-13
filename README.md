@@ -6,7 +6,7 @@
 [![codecov](https://codecov.io/gh/madou/@gw2armory/resource-utils/branch/master/graph/badge.svg)](https://codecov.io/gh/madou/@gw2armory/resource-utils)
 [![Dependency Status](http://img.shields.io/david/madou/@gw2armory/resource-utils.svg?style=flat-square)](https://david-dm.org/madou/@gw2armory/resource-utils)
 
-Quick description of what it does!
+Creates maps of gw2 resources with associated helper utilities.
 
 ## Installation
 
@@ -14,21 +14,42 @@ Quick description of what it does!
 npm install @gw2armory/resource-utils
 ```
 
-## Usage
+## Api
+
+### build `(resourceName: string) => Promise<ResourceMap>`
 
 ```javascript
-import x from '@gw2armory/resource-utils';
+import { build } from '@gw2armory/resource-utils';
+
+const nameToIdMap = await build('items');
+// { "MONSTER ONLY Moa Unarmed Pet":1 ... }
 ```
 
-| prop | type | required |
-|-|-|-|
-| children | Children  | no |
-| header | Children | yes |
-| backgroundImage | string | no |
-| backgroundColor | string | no |
-| headerOnly | boolean | no |
-| onSticky | (boolean) => void | no |
-| className | string | no |
+#### ResourceMap
+
+```json
+{
+ [itemName: string]: number
+}
+```
+
+### exact `(map: ResourceMap, itemName: string) => ?number`
+
+```javascript
+import { exact } from '@gw2armory/resource-utils';
+
+const exact = exact(nameToIdMap, 'MONSTER ONLY Moa Unarmed Pet');
+// 1
+```
+
+### fuzzy `(map: ResourceMap, itemName: string) => ?number`
+
+```javascript
+import { fuzzy } from '@gw2armory/resource-utils';
+
+const exact = fuzzy(nameToIdMap, 'monster');
+// { "Legendary Kudu's Monster Loot Box": 65497, ... }
+```
 
 ### Testing
 
