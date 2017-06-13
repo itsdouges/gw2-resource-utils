@@ -1,6 +1,6 @@
 {
   "name": "@gw2armory/resource-utils",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Creates maps of gw2 resources with associated helper utilities.",
   "repository": {
     "type": "git",
