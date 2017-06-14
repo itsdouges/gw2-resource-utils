@@ -4,7 +4,10 @@
   "description": "Creates maps of gw2 resources with associated helper utilities.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/madou/@gw2a/resource-utils.git"
+    "url": "git+https://github.com/madou/gw2armory-resource-utils.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "author": "Michael Dougall",
   "license": "MIT",
@@ -115,9 +118,9 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/madou/@gw2armory/resource-utils/issues"
+    "url": "https://github.com/madou/gw2armory-resource-utils/issues"
   },
-  "homepage": "https://github.com/madou/@gw2armory/resource-utils#readme",
+  "homepage": "https://github.com/madou/gw2armory-resource-utils#readme",
   "directories": {
     "test": "test"
   }
